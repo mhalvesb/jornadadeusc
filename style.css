@@ -498,7 +498,7 @@
 @media (max-width: 768px) {
   .pain-section .container,
   .solution-section .container {
-    max-width: 95%;
+    max-width: 100%;
   }
   .pain-section p,
   .solution-section p {
