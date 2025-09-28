@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Detecta tela menor que 768px
         const isMobile = window.matchMedia('(max-width: 767px)').matches;
         const threshold = isMobile ? 0.01 : 0.15;  // 5% para mobile, 15% para desktop
-        const fadeRange = isMobile ? 0.25 : 0.1;   // fade mais longo para mobile
+        const fadeRange = isMobile ? 0.1 : 0.1;   // fade mais longo para mobile
 
         if (ratio < threshold) {
           ratio = 0;
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function update() {
       const isMobile = window.matchMedia('(max-width: 767px)').matches;
-      const threshold = isMobile ? 0.05 : 0.15;
-      const fadeRange = isMobile ? 0.25 : 0.1;
+      const threshold = isMobile ? 0.01 : 0.15;
+      const fadeRange = isMobile ? 0.1 : 0.1;
 
       document.querySelectorAll(elemsSelector).forEach(el => {
         let ratio = calcRatio(el);
