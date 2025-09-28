@@ -1,0 +1,324 @@
+      /* === CONFIGURAÇÕES GLOBAIS E VARIÁVEIS === */
+      :root {
+        --background: #f9f6f1;
+        --foreground: #2e2e2e;
+        --card: #ffffff;
+        --primary: #c0a15e;
+        --primary-darker: #aa8e4c;
+        --muted-foreground: #5e5e5e;
+        --border: #eaeaea;
+        --radius: 0.75rem;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Lato", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-body);
+        background-color: var(--background);
+        color: var(--foreground);
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* === ESTILOS DE TEXTO === */
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .text-primary {
+        color: var(--primary);
+      }
+
+      .text-muted-foreground {
+        color: var(--muted-foreground);
+      }
+
+      /* === COMPONENTES === */
+      .cta-button {
+        display: inline-block;
+        background-image: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-darker)
+        );
+        color: white;
+        font-weight: 700;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        box-shadow: 0 8px 32px -4px hsla(42, 33%, 55%, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px -4px hsla(42, 33%, 55%, 0.5);
+      }
+
+      .card {
+        background-color: var(--card);
+        border-radius: var(--radius);
+        padding: 2rem;
+        box-shadow: 0 4px 16px -2px hsla(0, 0%, 0%, 0.08);
+        border: 1px solid var(--border);
+        height: 100%;
+      }
+
+      /* === SEÇÕES === */
+      section {
+        padding: 4rem 0;
+      }
+
+      .hero {
+        padding: 4rem 0;
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      @media (min-width: 992px) {
+        .hero-content {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      @media (min-width: 992px) {
+        .hero-text {
+          text-align: left;
+        }
+      }
+
+      .hero-text .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: var(--muted-foreground);
+      }
+
+      .hero-text .secure-text {
+        font-size: 0.875rem;
+        margin-top: 1rem;
+        color: var(--muted-foreground);
+      }
+
+      .hero-image {
+        width: 100%;
+        height: auto;
+        border-radius: 1.5rem;
+        box-shadow: 0 16px 40px -8px hsla(0, 0%, 0%, 0.2);
+      }
+
+      /* Pain & Solution Sections */
+      .pain-section,
+      .solution-section {
+        text-align: center;
+      }
+      .pain-section .container,
+      .solution-section .container {
+        max-width: 800px;
+      }
+      .pain-section p,
+      .solution-section p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Offer Section */
+      .offer-section {
+        background-color: #fdfaf6;
+      }
+      .offer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+      @media (min-width: 768px) {
+        .offer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .offer-card-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .offer-icon-wrapper {
+        background-color: hsla(42, 33%, 55%, 0.1);
+        padding: 0.75rem;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .offer-icon-wrapper i {
+        color: var(--primary);
+        width: 2rem;
+        height: 2rem;
+      }
+      .bonus-tag {
+        background-color: var(--primary);
+        color: white;
+        font-size: 0.75rem;
+        font-weight: bold;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        margin-right: 0.5rem;
+        display: inline-block;
+      }
+      .offer-card-content .value-text {
+        color: var(--primary);
+        font-weight: bold;
+        margin-top: 0.5rem;
+      }
+
+      /* Pricing Section */
+      .pricing-box {
+        background-color: var(--card);
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 16px -2px hsla(0, 0%, 0%, 0.1);
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 2.5rem;
+        text-align: center;
+      }
+      .pricing-box .strikethrough {
+        font-size: 1.5rem;
+        text-decoration: line-through;
+        color: var(--muted-foreground);
+      }
+      .pricing-box .final-price {
+        font-size: 4rem;
+        font-family: var(--font-heading);
+        color: var(--primary);
+        line-height: 1.1;
+        margin: 0.5rem 0;
+      }
+      .pricing-box .cta-button {
+        width: 100%;
+        margin-top: 1.5rem;
+        animation: pulse 2s infinite;
+      }
+
+      /* Guarantee Section */
+      .guarantee-section {
+        background-color: #fdfaf6;
+      }
+      .guarantee-box {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2.5rem;
+        border: 2px solid hsla(42, 33%, 55%, 0.2);
+        background-color: hsla(42, 33%, 55%, 0.05);
+        border-radius: 1.5rem;
+      }
+      .guarantee-icon-wrapper {
+        background-color: hsla(42, 33%, 55%, 0.1);
+        padding: 1rem;
+        border-radius: 50%;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+      .guarantee-icon-wrapper i {
+        color: var(--primary);
+        width: 3rem;
+        height: 3rem;
+      }
+      .guarantee-box h2 {
+        color: var(--primary);
+      }
+
+      /* Final CTA */
+      .final-cta {
+        text-align: center;
+      }
+      .final-cta .container {
+        max-width: 600px;
+      }
+      .final-cta-button {
+        width: 100%;
+        font-size: 1.25rem;
+      }
+      .final-benefits {
+        margin-top: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.8;
+        color: var(--muted-foreground);
+      }
+
+      /* Pulse Animation for CTA button */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.03);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+       .fade {
+      opacity: 0;                /* começa invisível */
+      transform: translateY(20px);
+      transition: opacity 600ms ease-out, transform 600ms ease-out;
+      will-change: opacity, transform;
+      background: white;
+      padding: 24px;
+      margin-bottom: 28px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    /* Classe aplicada quando o elemento "entra" o suficiente na viewport */
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Se quiser que a opacidade varie continuamente conforme entra, use data-opac */
+    .fade.dynamic {
+      transition: transform 600ms ease-out; /* opacidade será controlada por JS diretamente */
+    }
