@@ -148,6 +148,7 @@
         height: auto;
         border-radius: 1.5rem;
         box-shadow: 0 16px 40px -8px hsla(0, 0%, 0%, 0.2);
+        max-width: none;
       }
 
       /* Pain & Solution Sections */
@@ -322,3 +323,161 @@
     .fade.dynamic {
       transition: transform 600ms ease-out; /* opacidade será controlada por JS diretamente */
     }
+
+    /* === RESPONSIVIDADE === */
+
+/* Pequenos celulares (até 500px) */
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  .hero-text .subtitle {
+    font-size: 1rem;
+  }
+  .cta-button, .final-cta-button {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+  .hero-content {
+    gap: 1.5rem;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .offer-card-content {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+  .pricing-box .final-price {
+    font-size: 3rem;
+  }
+}
+
+/* Tablets pequenos (≥ 501px e < 768px) */
+@media (min-width: 501px) and (max-width: 767px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero-text .subtitle {
+    font-size: 1.1rem;
+  }
+  .cta-button, .final-cta-button {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+  .hero-content {
+    gap: 2rem;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .offer-card-content {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+  .pricing-box .final-price {
+    font-size: 3.5rem;
+  }
+}
+
+/* Tablets grandes (≥ 768px e < 992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  .hero-text .subtitle {
+    font-size: 1.2rem;
+  }
+  .cta-button, .final-cta-button {
+    font-size: 1.1rem;
+    padding: 14px 24px;
+  }
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .offer-card-content {
+    gap: 1rem;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+  .pricing-box .final-price {
+    font-size: 4rem;
+  }
+}
+
+/* Desktops médios (≥ 992px e < 1200px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero h1 {
+    font-size: 2.75rem;
+  }
+  .hero-text .subtitle {
+    font-size: 1.25rem;
+  }
+  .cta-button, .final-cta-button {
+    font-size: 1.2rem;
+    padding: 16px 28px;
+  }
+  .offer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+  .pricing-box .final-price {
+    font-size: 4.5rem;
+  }
+}
+
+/* Desktops grandes (≥ 1200px) */
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero-text .subtitle {
+    font-size: 1.35rem;
+  }
+  .cta-button, .final-cta-button {
+    font-size: 1.3rem;
+    padding: 18px 32px;
+  }
+  .offer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+  .hero-image {
+    max-width: 100%;
+  }
+  .pricing-box .final-price {
+    font-size: 5rem;
+  }
+}
+
+/* Ajustes finos para textos longos em pain-section e pricing-section */
+@media (max-width: 768px) {
+  .pain-section .container,
+  .solution-section .container {
+    max-width: 95%;
+  }
+  .pain-section p,
+  .solution-section p {
+    font-size: 1rem;
+  }
+  .pricing-box {
+    padding: 2rem;
+  }
+}
