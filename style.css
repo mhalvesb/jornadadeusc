@@ -74,9 +74,10 @@
       .text-muted-foreground {
         color: var(--muted-foreground);
       }
-
+      
       /* === COMPONENTES === */
       .cta-button {
+        
         display: inline-block;
         background-image: linear-gradient(
           135deg,
